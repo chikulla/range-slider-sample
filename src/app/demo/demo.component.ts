@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import 'ion-rangeslider';
 
@@ -12,7 +12,13 @@ export class DemoComponent implements OnInit {
 
   ngOnInit() {
     const ionr = this.elementRef.nativeElement.querySelector('#ionr');
-    (<any>$(ionr)).ionRangeSlider();
+    (<any>$(ionr)).ionRangeSlider({
+      type: 'double',
+      min: 0,
+      max: 1000,
+      from: 400,
+      to: 750,
+    });
   }
 
 }
