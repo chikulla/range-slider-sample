@@ -20,5 +20,4 @@ export class DemoComponent implements OnInit {
       to: 750,
     });
   }
-
 }
